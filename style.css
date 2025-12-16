@@ -1,0 +1,92 @@
+@font-face {
+    font-family: unique;
+    src: url(Chaste\ otf.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family: unique;
+}
+
+:root{
+    --pri: #f38313;
+    --mid: #473472;
+    --sec: #636CCB;
+
+    
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: var(--mid);
+}
+nav{
+    height: 70px;
+    width: 100%;
+    background-color: var(--sec);
+}
+
+.allelem{
+    margin-top: 20px;
+    height: 70%;
+    width: 100%;
+    background-color: var(--mid);
+    display: flex;
+    gap: 20px;
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--pri);
+    overflow: hidden;
+    transition: all 0.5s ease;
+     
+}
+.allelem img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   padding: 15px;
+   border-radius: 30px;
+}
+
+.allelem img:active{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.allelem .elem{
+    height: 360px;
+    width: 360px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.elem h1{
+    position: absolute;
+    bottom: 5%;
+    right: 7%; 
+}
+.allelem h1:hover{
+    transform: scale(1.4);
+    right: 20%;
+    transition: 0.5s;
+    cursor: pointer;
+   
+}
+
+.finalelem{
+    height: 100%;
+    width: 100%;
+    background-color: var(--mid);
+    padding: 10px;
+    font-size: 50px;
+    display: none;
+}
