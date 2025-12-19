@@ -2,6 +2,10 @@
     font-family: unique;
     src: url(Chaste\ otf.otf);
 }
+@font-face {
+    font-family: switzer;
+    src: url(./Switzer_Complete/Fonts/OTF/Switzer-Bold.otf);
+}
 
 * {
     margin: 0;
@@ -20,6 +24,8 @@ html, body {
     --pri: #f38313;
     --mid: #473472;
     --sec: #636CCB;
+    --tri: #6e2525;
+
 
     
 }
@@ -37,24 +43,23 @@ nav{
 
 .allelem{
     margin-top: 20px;
-    height: 70%;
+    height: 100%;
     width: 100%;
     background-color: var(--mid);
     display: flex;
-    gap: 20px;
+    gap: 10px;
     font-size: 10px;
     font-weight: 900;
     color: var(--pri);
-    overflow: hidden;
+    padding: 10px;
     transition: all 0.5s ease;
-     
+    position: absolute;
 }
 .allelem img{
    height: 100%;
    width: 100%;
    object-fit: cover;
-   padding: 15px;
-   border-radius: 30px;
+   border-radius: 20px;
 }
 
 .allelem img:active{
@@ -63,11 +68,13 @@ nav{
 }
 
 .allelem .elem{
-    height: 360px;
+    height: 380px;
     width: 360px;
     border-radius: 20px;
     position: relative;
+    box-shadow: 0px 0px 10px rgb(139, 108, 210);
 }
+
 
 .elem h1{
     position: absolute;
@@ -87,7 +94,144 @@ nav{
     width: 100%;
     background-color: var(--mid);
     padding: 10px;
-    font-size: 50px;
+    font-size: 40px;
     display: none;
-    
+    position: absolute;
+}
+
+.elemclose{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: unique;
+    color: rgb(70, 196, 16);
+    background-color: rgba(206, 211, 223, 0);
+    transition: 0.1s all linear;
+}
+.elemclose:active{
+    cursor: pointer;
+    background-color: rgba(206, 211, 223, 0.151);
+    transform: scale(1.2);
+}
+
+.finalelem .todo{
+    height: 85%;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+}
+
+.finalelem .todo .task{
+    background-color: var(--tri);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.finalelem .todo .task form{
+   height: 100%;
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+}
+.finalelem .todo .task input#task-input{
+    width: 97%;
+    height: 12%;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-family: unique;
+}
+.finalelem .todo .task textarea {
+     width: 97%;
+    height: 60%;
+    margin: 10px;
+    border-radius: 8px;
+    border: 2px solid pink;
+    padding: 10px;
+    font-size: 18px;
+    font-family: unique;
+    color: rgb(244, 245, 248);
+    background-color: #504a4ace;
+}
+.finalelem .todo .task button{
+     width: 97%;
+    height: 10%;
+    border-radius: 10px;
+    margin: 10px;
+    border: none;
+    font-size: 30px;
+    font-family: unique;
+    color: var(--pri);
+    font-weight: 900;
+}
+button:active{
+    background-color: rgba(237, 238, 239, 0.151);
+    transform: scale(0.9);
+}
+
+.finalelem .todo .taskdone{
+    height: 100%;
+    width: 60%;
+    background-color: var(--tri);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+.finalelem .todo .alltask{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: var(--pri);
+    width: 100%;
+}
+.finalelem .todo .alltask button{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #f38313;
+    background-color: green;
+    font-family: switzer;
+}
+
+.mark-imp{
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+    color: var(--pri);
+    margin-left: 15px;
+}
+.mark-imp #imp{
+    scale: 2;
+}
+
+span{
+    align-items: center;
+    font-size: 13px;
+    color: rgb(248, 245, 245);
+    background-color: red;
+    padding: 4px 5px;
+    border-radius: 50%;
+    font-weight: 500;
+}
+span.true{
+    opacity: 1;
+}
+span.false{
+    opacity: 0;
 }
